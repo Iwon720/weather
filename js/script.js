@@ -1,4 +1,4 @@
-const url = 'https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=67bcc282f8d4c50cb37f5953a4e62c1c';
+const url = 'https://samples.openweathermap.org/data/2.5/forecast?id=524901&appid=b1b15e88fa797225412429c1c50c122a1';
 const temperatureUnit = '˚';
 const humidityUnit = ' %';
 const pressureUnit = ' мм. рт. ст.';
