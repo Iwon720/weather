@@ -1,6 +1,6 @@
 "use strict";
 
-var url = 'http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=67bcc282f8d4c50cb37f5953a4e62c1c';
+var url = 'https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=67bcc282f8d4c50cb37f5953a4e62c1c';
 var temperatureUnit = '˚';
 var humidityUnit = ' %';
 var pressureUnit = ' мм. рт. ст.';
