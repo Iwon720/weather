@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+}
+
+.weather {
+  width: 100%;
+  min-height: 100vh;
+}
+
+html[data-theme=day] .weather,
+.weather {
+  background: linear-gradient(360deg, #3594bf 0%, rgba(255, 255, 255, 0) 100%), #53a6cb;
+}
+
+html[data-theme=night] .weather {
+  background: linear-gradient(360deg, #55707e 0%, rgba(255, 255, 255, 0) 100%), #042232;
+}
+
+.weather__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.current {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.current__city {
+  font-size: 3em;
+}
+.current__description {
+  font-size: 1.5em;
+}
+.current__temperature {
+  font-size: 4em;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.forecast__item {
+  text-align: center;
+}
+.forecast__time, .forecast__icon {
+  margin-bottom: 1em;
+}
+.forecast__icon {
+  width: 50px;
+  height: 50px;
+}
+.forecast__temperature {
+  font-size: 1.5em;
+}
+
+.details__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.details__item {
+  flex: 1;
+}
+.details__name {
+  margin-bottom: 1em;
+}
+.details__value {
+  font-size: 1.5em;
+}
+
+html.transition,
+html.transition * {
+  transition: all 2000ms !important;
+  transition-delay: 0 !important;
+}
+
+.icon_01d,
+.icon_01n,
+.icon_02d,
+.icon_02n,
+.icon_03d,
+.icon_03n,
+.icon_04d,
+.icon_05n,
+.icon_09d,
+.icon_09n,
+.icon_10d,
+.icon_10n,
+.icon_11d,
+.icon_11n,
+.icon_13d,
+.icon_13n,
+.icon_50d,
+.icon_50n {
+  background-size: 50px;
+  background-repeat: no-repeat;
+}
+
+.icon_01d,
+.icon_01n {
+  background-image: url("../images/01d.png");
+}
+
+.icon_02d,
+.icon_02n {
+  background-image: url("../images/02d.png");
+}
+
+.icon_03d,
+.icon_03n {
+  background-image: url("../images/03d.png");
+}
+
+.icon_04d,
+.icon_04n {
+  background-image: url("../images/04d.png");
+}
+
+.icon_09d,
+.icon_09n {
+  background-image: url("../images/09d.png");
+}
+
+.icon_10d,
+.icon_10n {
+  background-image: url("../images/10d.png");
+}
+
+.icon_11d,
+.icon_11n {
+  background-image: url("../images/11d.png");
+}
+
+.icon_13d,
+.icon_13n {
+  background-image: url("../images/13d.png");
+}
+
+.icon_50d,
+.icon_50n {
+  background-image: url("../images/50d.png");
+}
