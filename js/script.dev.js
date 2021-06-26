@@ -1,11 +1,18 @@
 "use strict";
 
-var url = 'https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=67bcc282f8d4c50cb37f5953a4e62c1c';
+var url = 'https://api.openweathermap.org/data/2.5/forecast?id=524901&appid=13eee15044ec16f1b3ac0fabbd85d4cb';
 var temperatureUnit = '˚';
 var humidityUnit = ' %';
 var pressureUnit = ' мм. рт. ст.';
 var windUnit = ' м/с';
-var currentData;
+var currentData, cityId;
+var selectedLanguage = myForm.language;
+selectedLanguage.addEventListener("change", function () {
+  var selectedOption = selectedLanguage.options[selectedLanguage.selectedIndex];
+  cityId = selectedOption.value;
+  url = "https://api.openweathermap.org/data/2.5/forecast?id=".concat(cityId, "&appid=13eee15044ec16f1b3ac0fabbd85d4cb");
+  start();
+});
 
 function getData() {
   var response, jsonData;
@@ -55,7 +62,7 @@ Number.prototype.pad = function (size) {
 function getHoursString(dateTime) {
   var date = new Date(dateTime);
   var hours = date.getHours().pad();
-  return 8;
+  return hours;
 }
 
 function getValueWithUnit(value, unit) {
@@ -141,7 +148,7 @@ function renderTheme(data) {
 }
 
 function periodUpdates() {
-  setInterval(start, 6000000);
+  setInterval(start, 100000);
   setInterval(function () {
     renderTheme(currentData);
   }, 60000);
@@ -162,4 +169,50 @@ function transition() {
   }, 4000);
 }
 
-start();
+start(); // var firstLanguage = myForm.language.options[0];
+// console.log("Index: " + firstLanguage.index);
+// console.log("Text: " + firstLanguage.text);
+// console.log("Value: " + firstLanguage.value);
+
+/*  
+    {
+        "id": 524901,
+        "name": "Moscow",
+        "state": "",
+        "country": "RU",
+        "coord": {
+            "lon": 37.615555,
+            "lat": 55.75222
+        }
+    },
+    {
+        "id": 7873648,
+        "name": "Erl",
+        "state": "",
+        "country": "AT",
+        "coord": {
+            "lon": 12.21398,
+            "lat": 47.698971
+        }
+    },
+    {
+        "id": 629634,
+        "name": "Brest",
+        "state": "",
+        "country": "BY",
+        "coord": {
+            "lon": 23.700001,
+            "lat": 52.099998
+        }
+    },
+    {
+        "id": 625144,
+        "name": "Minsk",
+        "state": "",
+        "country": "BY",
+        "coord": {
+            "lon": 27.566668,
+            "lat": 53.900002
+        }
+    },
+*/

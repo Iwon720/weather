@@ -14,7 +14,7 @@ html {
 }
 
 html[data-theme=day] .weather,
-.weather {
+.weather, select {
   background: linear-gradient(360deg, #3594bf 0%, rgba(255, 255, 255, 0) 100%), #53a6cb;
 }
 
@@ -80,6 +80,12 @@ html.transition,
 html.transition * {
   transition: all 2000ms !important;
   transition-delay: 0 !important;
+}
+
+select {
+  width: 100px;
+  height: 25px;
+  font-size: 1em;
 }
 
 .icon_01d,
